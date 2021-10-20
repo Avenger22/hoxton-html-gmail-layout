@@ -136,18 +136,18 @@ li {
 
 .search-bar {
     padding-top: 10px;
-    padding-left: 50px;
+    padding-left: 20px;
 }
 
 .search-bar #query {
     background-color: #f1f3f4;
     height: 35px;
-    width: 600px;
+    width: 50vw;
     border-radius: 5%;
     font-family:'Times New Roman', Times, serif;
     font-size: 16px;
     font-weight: bold;
-    padding-left: 50px;
+    padding-left: 20px;
 }
 
 .icons-header {
@@ -160,7 +160,7 @@ li {
 }
 
 .icons#special-icon {
-    padding-left: 120px;
+    float: right;
     font-size: 34px;
 }
 
@@ -242,4 +242,82 @@ padding-right: 30px;
 
 hr {
     font-weight: bold;
+}
+
+/* Media Queries to make it responsive */
+@media screen and (max-width: 1000px) {
+
+    .right-menu .right-menu-sub-2 {
+        display: none;
+    }
+
+   .right-menu {
+    grid-area: right-menu;
+    border: 2px solid black;
+    display: grid;
+    grid-template: 
+    "right-menu-sub-1" 1fr / 
+     1fr;
+    }
+}
+
+
+@media screen and (max-width: 960px) {
+    .icons-header .icons {
+        font-size: 22px;
+        padding-left: 10px;
+    }
+    .icons-header #special-icon {
+        font-size: 22px;
+        padding-right: 30px;
+    }
+    .header-sub-1 #img1-sub-1, .header-sub-1 #img2-sub-1 {
+        height: 20px;
+        margin-top: 10px;
+        
+    }
+    .header-sub-1 #span-sub-1 {
+        font-size: 15px;
+        margin-top: 15px;
+        padding-left: 15px;
+    }
+    .header-sub-2 .search-bar {
+        padding-left: 20px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .header .header-sub-3, .right-menu {
+        display: none;
+    }
+
+    .container-menus {
+        height: 100vh;
+        /*grid starts the big grid here */
+        display: grid;
+        grid-template: 
+        "header header" 60px
+        "left-menu main" 1fr / 
+        0.2fr 0.8fr;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+
+    .header .header-sub-1, .left-menu {
+        display: none;
+    }
+
+    .container-menus {
+        height: 100vh;
+        /*grid starts the big grid here */
+        display: grid;
+        grid-template: 
+        "header" 60px
+        "main" 1fr / 
+         1fr;
+    }
+
 }
