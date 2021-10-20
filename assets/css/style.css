@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
 /* Section 1 starts here */
 .container-menus {
     height: 100vh;
@@ -18,7 +26,7 @@
 /* here starts the nested header wich has a grid himself also is part of container grid */
 .header {
     grid-area: header;
-    border: 1px solid black;
+    border: 2px solid black;
     display: grid;
     grid-template: 
     "header-sub-1 header-sub-2 header-sub-3" 1fr / 
@@ -43,11 +51,12 @@
 /* start of nested grid for left-menu */
 .left-menu {
     grid-area: left-menu;
-    border: 1px solid black;
+    border: 2px solid black;
     display: grid;
     grid-template: 
-    "left-menu-sub-1" 1fr
-    "left-menu-sub-2" 1fr / 
+    "left-menu-sub-1" 0.45fr
+    "left-menu-sub-2" 0.50fr
+    "left-menu-sub-3" 0.05fr / 
      1fr;
 }
 
@@ -60,17 +69,37 @@
     grid-area: left-menu-sub-2;
     border: 1px solid black;
 }
+
+.left-menu-sub-3 {
+    grid-area: left-menu-sub-3;
+    border: 1px solid black;
+}
 /*end of nested grid for left menu */
 
+/* start of nested main sub grid with 2 menus sub */
 .main {
     grid-area: main;
+    border: 2px solid black;
+    display: grid;
+    grid-template: 
+    "main-sub-1" 0.1fr
+    "main-sub-2" 0.9fr / 
+     1fr;
+}
+
+.main-sub-1 {
+    grid-area: main-sub-1;
+    border: 1px solid black;
+}
+.main-sub-2 {
+    grid-area: main-sub-2;
     border: 1px solid black;
 }
 
 /* creating a nested grid for right part */
 .right-menu {
     grid-area: right-menu;
-    border: 1px solid black;
+    border: 2px solid black;
     display: grid;
     grid-template: 
     "right-menu-sub-1 right-menu-sub-2" 1fr / 
@@ -149,4 +178,68 @@
 .left-menu-sub-1 .button-group {
     padding-top: 20px;
     padding-left: 10px;
+}
+
+.main-group {
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+.main-group .main-icons-1 {
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 15px;
+    color: #000;
+}
+
+.arrows {
+display: inline-block;
+float: right;
+padding-right: 30px;
+}
+
+.arrows .arrows-icon {
+    font-size: 18px;
+    color: #000;
+    padding-left: 25px;
+}
+
+.left-icons-group {
+    padding-top: 5px;
+    text-align: center;
+}
+
+.left-icons-group i {
+    padding-left: 7px;
+}
+
+
+.main-post {
+    padding-left: 15px;
+    margin-top: 15px;
+}
+
+.main-post p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    text-align: left;
+    display: inline;
+    padding-left: 20px;
+}
+
+.main-post span {
+    display: inline block;
+    padding-left: 70px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.main-post input {
+    display: inline block;
+}
+
+hr {
+    font-weight: bold;
 }
