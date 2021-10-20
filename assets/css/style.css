@@ -1,0 +1,106 @@
+* {
+    margin: 0px 0px;
+    padding: 0px 0px;
+    box-sizing: border-box;
+}
+
+/* Section 1 starts here */
+.container-menus {
+    height: 100vh;
+    /*grid starts the big grid here */
+    display: grid;
+    grid-template: 
+    "header header header" 60px
+    "left-menu main right-menu" 1fr / 
+    0.5fr 2fr 1fr;
+}
+
+/* here starts the nested header wich has a grid himself also is part of container grid */
+.header {
+    grid-area: header;
+    border: 1px solid black;
+    display: grid;
+    grid-template: 
+    "header-sub-1 header-sub-2 header-sub-3" 1fr / 
+    0.5fr 2fr 1fr;
+}
+
+.header-sub-1 {
+    grid-area: header-sub-1;
+    border: 1px solid black;
+}
+
+.header-sub-2 {
+    grid-area: header-sub-2;
+    border: 1px solid black;
+}
+
+.header-sub-3 {
+    grid-area: header-sub-3;
+    border: 1px solid black;
+} /* end of nested grid for header */
+
+/* start of nested grid for left-menu */
+.left-menu {
+    grid-area: left-menu;
+    border: 1px solid black;
+    display: grid;
+    grid-template: 
+    "left-menu-sub-1" 1fr
+    "left-menu-sub-2" 1fr / 
+     1fr;
+}
+
+.left-menu-sub-1 {
+    grid-area: left-menu-sub-1;
+    border: 1px solid black;
+}
+
+.left-menu-sub-2 {
+    grid-area: left-menu-sub-2;
+    border: 1px solid black;
+}
+/*end of nested grid for left menu */
+
+.main {
+    grid-area: main;
+    border: 1px solid black;
+}
+
+/* creating a nested grid for right part */
+.right-menu {
+    grid-area: right-menu;
+    border: 1px solid black;
+    display: grid;
+    grid-template: 
+    "right-menu-sub-1 right-menu-sub-2" 1fr / 
+     0.8fr 0.2fr;
+}
+
+.right-menu-sub-1 {
+    grid-area: right-menu-sub-1;
+    border: 1px solid black;
+}
+
+.right-menu-sub-2 {
+    grid-area: right-menu-sub-2;
+    border: 1px solid black;
+}
+
+/*end of nested grid of right menu sub */
+
+.header-sub-1 #img2-sub-1 {
+    padding-left: 10px;
+}
+
+.header-sub-1 #img1-sub-1 {
+    padding-left: 15px;
+}
+
+.header-sub-1 #span-sub-1 {
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 0.2px;
+    font-family: 'Courier New', Courier, monospace;
+    padding-left: 3px;
+}
